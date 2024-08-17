@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+        let myPromise = new Promise((resolve,reject) =>{
+
+            let operationSucessful = true;
+            if(operationSucessful){
+                resolve("Operation Sucess");
+            }
+            else{
+                reject ("Operation failed");
+            }
+        })
+
+        // chaining Promises
+
+        let anotherPromise = new Promise((resolve,reject) =>{
+            setTimeout(()=>{
+                resolve("Second operation compailed successfully!");
+            },2000);
+        });
+
+        myPromise
+            .then((result)=>{
+                console.log("First Promise :",result);
+                return anotherPromise; // returning new promise for chaining
+            })
+
+            .then((result) =>{
+                console.log("Second Promise",result);
+            })
+            .catch((reason)=>{
+                console.error("Error :", reason);
+            });
+
+
+
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //function scope
+
+        function outer_function(){
+            let message = "I am inside function";
+            console.log(message);
+        }
+        message = "hello";
+        outer_function();
+        console.log(message);
+
+        // closures 
+
+        function outer(){
+            let message1 = "Hello";
+            
+            function innner(){
+                console.log(message1);
+            }
+            return innner;
+        }
+
+        let closure = outer();
+        closure();
+
+        // callback function 
+
+        function fetchData(callback){
+            // Simulate an asynchronous operation
+            setTimeout(function(){
+                let data = "This is the data";
+                callback(data);
+
+            },2000);
+        }
+        function displayData(data){
+            console.log(data);
+        }
+        fetchData(displayData);
+
+        // Named functions 
+
+        function a(){
+            console.log("I am good");
+        }
+        a();
+
+        //anonymous function 
+
+        const Anonymous = function(){
+            console.log("I am anonymous");
+
+        };
+        Anonymous();
+
+        // function Hoisting 
+
+        hosted();
+        function hosted(){
+            console.log("I am hosted");
+        }
+
+
+
+
+
+    </script>
+    
+</body>
+</html>

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p>Counter : <span id="count">0</span></p>
+    <button id="btn1">Click Here</button>
+    <button id="btn2">Click Here</button>
+
+    <script>
+        let count = document.getElementById("count");
+        let ibutton = document.getElementById("btn1");
+        let debutton = document.getElementById("btn2");
+
+        let previous = 0;
+        
+        ibutton.addEventListener("click",
+            function(){
+                previous ++;
+                count.textContent = previous;
+            },
+
+        debutton.addEventListener("click",
+            function(){
+                previous --;
+                count.textContent = previous;
+            }
+        )
+        )
+
+    </script>
+</body>
+</html>

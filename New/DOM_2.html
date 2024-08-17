@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./Styles.css">
+</head>
+<body id="mybody">
+    <h1 id="myh1" class = "head">Hello All</h1>
+    <p>This is Sreenu .I am 23 years old</p>
+    <a>Youtube</a>
+    <script>
+        let myh1 = document.getElementById("myh1");
+        // adding css class
+        myh1.classList.add("myh1new");
+        // removing css class 
+        myh1.classList.remove("head");
+
+        //Creating html element 
+        let new_ele = document.createElement("button");
+        new_ele.textContent = "click";
+        new_ele.classList.add("button")
+        let mybody = document.getElementById("mybody");
+        mybody.appendChild(new_ele);
+
+
+    </script>
+</body>
+</html>

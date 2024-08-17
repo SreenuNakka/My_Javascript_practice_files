@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // String
+        let name = "Sreenu";
+        console.log(name + "is a data type " + typeof(name));
+
+
+        // Number
+        let age = 23 ;
+        console.log(age + "is a data type "  +typeof(age));
+
+
+        // Boolean
+        let is_correct = true;
+        let is_he = false;
+        console.log(is_correct + "is a data type " +(is_correct));
+        console.log(is_he + "is a data type " +(is_he));
+
+
+        // Undefined
+        let a ;
+        console.log(a + "is a data type " + typeof(a));
+
+
+        // object 
+        let object_creation = {
+            name : "Sreenu",
+            age : 23
+        }
+        console.log("is a data type " + typeof(object_creation));
+        console.log(object_creation['name']);
+
+
+        // Arrays 
+        let colors = ["red","blue","green"];  
+        console.log("is a data type " + typeof(colors));
+        console.log(colors[2]);
+
+
+        // Functions 
+        // here a is function name
+        function fun1(name){
+            return  'Hello , ${name}';
+        }
+
+        console.log(fun1("Sreenu"));
+
+        
+
+        
+
+
+        
+    </script>
+    
+</body>
+</html>

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Counter</h1>
+    <p id="p1">0</p>
+    <button id="b1" onclick="function1()">Increase</button>
+    <button id="b2" onclick="function3()">reset</button>
+    <button id="b3" onclick="function2()">Decrease</button>
+    <script>
+        let A = document.getElementById("p1");
+        
+
+        function function1(){
+            let previous = A.textContent;
+            let updated = parseInt(previous) + 1 ;
+            A.textContent = updated;
+
+
+        }
+
+        function function2(){
+            let previous = A.textContent;
+            let updated = parseInt(previous) - 1 ;
+            A.textContent = updated;
+
+
+        }
+
+        function function3(){
+            A.textContent = 0 ;
+        
+
+        }
+
+
+        
+
+    </script>
+</body>
+</html>

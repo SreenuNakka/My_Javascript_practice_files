@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // objects
+        let person = {
+            first_name : "Nakka",
+            last_name  : "Sreenu",
+            age        : 23 
+        }
+
+        // access properties
+
+        console.log(person.first_name);
+        console.log(person["age"]);
+        console.log(person);
+
+        // adding 
+
+        person.gender = "Male";
+        console.log(person);
+
+        // updating 
+
+        person.age = 22 ;
+        console.log(person);
+
+
+        // delete 
+        delete person.age ;
+        console.log(person);
+
+        // object methods 
+
+        let calculate = {
+            add(a,b){
+                return a + b;
+            },
+            subtract(a,b){
+                return a - b ;
+            },
+            mul(a,b){
+                return a *b ;
+            }
+        }
+
+        console.log(calculate.add(5,2));
+        console.log(calculate.subtract(6,3));
+        console.log(calculate.mul(2,3));
+
+
+        // math method 
+        let circle = {
+            radius : 5,
+            area(){
+                return Math.PI * this.radius * this.radius;
+            }
+        };
+        console.log(circle.area());
+
+
+        // Date 
+        const d = new Date();
+        console.log(d);
+
+
+
+    </script>
+    
+</body>
+</html>

@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // array creation
+        let fruits = [1,3.4,"banana",true];
+        console.log(typeof(fruits));
+
+        // index access
+        console.log(fruits[2]);
+
+        // add element 
+        fruits.push("cherry");
+        console.log(fruits);
+
+        // remove a element 
+
+        fruits.pop();
+        console.log(fruits);
+
+        // shift remove an element in begnning of array 
+
+        fruits.shift();
+        console.log(fruits);
+
+        // unshift add one or more elements beginning of an array 
+
+        fruits.unshift(8,"hbfuwfh",false);
+        console.log(fruits);
+
+        // length 
+
+        console.log(fruits.length);
+
+        // concatinate 
+
+        fruits1 = ["guva",8,9.0];
+        let combined = fruits.concat(fruits1);
+        console.log(combined);
+        
+        // slicing (a part of array)
+
+        let subArray = combined.slice(2,4);
+        console.log(subArray);
+
+        // splice 
+        fruits.splice(2,2);
+        console.log(fruits);
+
+        fruits.splice(2,1,"kivi","melon");
+        console.log(fruits);
+
+        // index of 
+        console.log(fruits.indexOf("kivi"));
+
+        // filter 
+
+        console.log(combined.filter(i => i.length>5));
+
+        // forEach 
+
+        let numbers = [1,2,3,4,5,6];
+        numbers.forEach(function(i){
+            console.log(i * 2);
+        });
+
+        // map 
+
+        let ab = numbers.map(function(i){
+            return i * i ;
+
+        });
+        console.log(ab);
+
+
+        // find 
+        let find1 = numbers.find(function(i){
+            return i % 2 == 0 ;
+        });
+        console.log(find1);
+
+        // sort 
+
+        fruits.sort();
+        console.log(fruits);
+
+
+    </script>
+</body>
+</html>

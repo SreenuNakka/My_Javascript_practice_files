@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style3.css">
+</head>
+<body>
+    <div class="hover" id="d">
+        Hover over me 
+    </div>
+    <script>
+        let div = document.getElementById("d")
+        function changeColor(){
+            div.style.color = "blue";
+        }
+        function restoreColor(){
+            div.style.color = "white";
+
+        }
+
+        div.addEventListener("mouseover",changeColor);
+        div.addEventListener("mouseleave",restoreColor);
+    </script>
+</body>
+</html>
